@@ -1,0 +1,98 @@
+@import "tailwindcss";
+
+:root {
+  color-scheme: light;
+}
+
+body {
+  background-color: #fffbf5;
+  color: #1c1917;
+  selection-background-color: #fdba74;
+}
+
+::selection {
+  background-color: #fed7aa;
+  color: #7c2d12;
+}
+
+/* Custom Fresh Citrus Scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #fff7ed;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #fdba74;
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #fb923c;
+}
+
+/* Fruit Pulse Glows */
+@keyframes orangeGlow {
+  0%, 100% {
+    box-shadow: 0 0 15px rgba(249, 115, 22, 0.15);
+  }
+  50% {
+    box-shadow: 0 0 25px rgba(249, 115, 22, 0.3);
+  }
+}
+
+.fruit-glow {
+  animation: orangeGlow 3s ease-in-out infinite;
+}
+
+@media print {
+  body {
+    background: white !important;
+    color: #0f172a !important;
+  }
+
+  body * {
+    visibility: hidden;
+  }
+
+  #app-flow-guide-modal-overlay {
+    position: absolute !important;
+    left: 0 !important;
+    top: 0 !important;
+    width: 100% !important;
+    height: auto !important;
+    background: white !important;
+    padding: 0 !important;
+    visibility: visible !important;
+    overflow: visible !important;
+  }
+
+  #app-flow-guide-modal-container {
+    max-width: 100% !important;
+    max-height: none !important;
+    border: none !important;
+    box-shadow: none !important;
+    background: white !important;
+    color: #0f172a !important;
+    visibility: visible !important;
+  }
+
+  #app-flow-guide-modal-container * {
+    visibility: visible !important;
+    color: #0f172a !important;
+    background-color: transparent !important;
+    border-color: #cbd5e1 !important;
+  }
+
+  #printable-app-flow-doc {
+    overflow: visible !important;
+    padding: 0 !important;
+  }
+
+  button, .no-print {
+    display: none !important;
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "name": "AI Trading Agent",
+  "description": "Next-gen algorithmic AI trading agent featuring natural language trade analysis, Python strategy generation, Dhan API order routing, TradingView candlestick charts, backtesting, and paper/live execution.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
+

@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AI Trading Agent</title>
+    <meta name="description" content="Next-gen algorithmic AI trading agent featuring natural language trade analysis, Python strategy generation, Dhan API order routing, TradingView candlestick charts, backtesting, and paper/live execution." />
+    <meta property="og:title" content="AI Trading Agent" />
+    <meta property="og:description" content="Next-gen algorithmic AI trading agent featuring natural language trade analysis, Python strategy generation, Dhan API order routing, TradingView candlestick charts, backtesting, and paper/live execution." />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <script>
+      // Early protection against cross-origin third-party script errors (e.g. TradingView embed / CDN)
+      window.addEventListener('error', function(e) {
+        if (e.message === 'Script error.' || !e.filename || (e.filename && e.filename.indexOf('tradingview') !== -1)) {
+          e.preventDefault && e.preventDefault();
+          e.stopPropagation && e.stopPropagation();
+          return true;
+        }
+      }, true);
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
